@@ -19,34 +19,35 @@ public class SecretBlockGUI {
 	private static String jungleB64 = "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTkyYmE5MzYxYmRkODVlMjI2OWU3ZjBiZTEzMWNjMzI1NDFkMWUzOGM2YmExMzdlOGQyMWM2MmY2MjZhYWIxIn19fQ==";
 	private static String acaciaB64 = "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTM5ZmE2ZjFhOTY0NTExMWIyNzk2M2E3NmI4YzY2MTE2YTA3MGJjMzkzMDdjNWI5ODU2NzVjODE0ZTI2NSJ9fX0=";
 	private static String darkOakB64 = "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWU1YjQ4YTU5MmUxZWI4NGRkMjMwMWU2OWUyYWFhNTFlN2I3YWZjODJmMzFmZjRkMzYzMzFmZTczNzVjNzIifX19";
-	
+	private static String EndGateway = "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmRmNGM3ZjEyOWY0ZDY2Yzc3MzI4ZDIyZGI0ZjNlZTY3M2VmYjJkYzE5M2QzYTEyMzg5NjI4YTMxZjM2YmIifX19";
 	public SecretBlockGUI(){
 	}
 	
 	public Inventory generateStartInv(){
 		Items i = new Items();
-		Inventory inv = Bukkit.createInventory(null, 27, "§1Secret Blocks");
-		inv.setItem(0, i.create(Material.HUGE_MUSHROOM_1, (short) 0, 1, "§3Brown Mushroom Block", ""));
-		inv.setItem(1, i.create(Material.HUGE_MUSHROOM_2, (short) 0, 1, "§3Red Mushroom Block", ""));
-		inv.setItem(2, i.createHead(mushroomB64, 1, "§3Mushroom Block", "§7§lID§7 99:0"));
-		inv.setItem(3, i.createHead(stemB64, 1, "§3Mushroom Stem", "§7§lID§7 99:10"));
-		inv.setItem(4, i.createHead(fullStemB64, 1, "§3Mushroom Full Stem", "§7§lID§7 99:15"));
-		inv.setItem(5, i.createHead(doubleSlabB64, 1, "§3Double Stone Slab", "§7§lID§7 43:0"));
-		inv.setItem(6, i.createHead(stoneB64, 1, "§3Smooth Stone", "§7§lID§7 43:8"));
-		inv.setItem(7, i.createHead(sandstoneB64, 1, "§3Smooth Sandstone", "§7§lID§7 43:9"));
-		inv.setItem(8, i.createHead(redSandstoneB64, 1, "§3Smooth Red Sandstone", "§7§lID§7 181:8"));
+		Inventory inv = Bukkit.createInventory(null, 27, "1Secret Blocks");
+		inv.setItem(0, i.create(Material.HUGE_MUSHROOM_1, (short) 0, 1, "3Brown Mushroom Block", ""));
+		inv.setItem(1, i.create(Material.HUGE_MUSHROOM_2, (short) 0, 1, "3Red Mushroom Block", ""));
+		inv.setItem(2, i.createHead(mushroomB64, 1, "3Mushroom Block", "7lID7 99:0"));
+		inv.setItem(3, i.createHead(stemB64, 1, "3Mushroom Stem", "7lID7 99:10"));
+		inv.setItem(4, i.createHead(fullStemB64, 1, "3Mushroom Full Stem", "7lID7 99:15"));
+		inv.setItem(5, i.createHead(doubleSlabB64, 1, "3Double Stone Slab", "7lID7 43:0"));
+		inv.setItem(6, i.createHead(stoneB64, 1, "3Smooth Stone", "7lID7 43:8"));
+		inv.setItem(7, i.createHead(sandstoneB64, 1, "3Smooth Sandstone", "7lID7 43:9"));
+		inv.setItem(8, i.createHead(redSandstoneB64, 1, "3Smooth Red Sandstone", "7lID7 181:8"));
 		
-		inv.setItem(9, i.createHead(oakB64, 1, "§3Full Bark Oak", "§7§lID§7 17:12"));
-		inv.setItem(10, i.createHead(spruceB64, 1, "§3Full Bark Spruce", "§7§lID§7 17:13"));
-		inv.setItem(11, i.createHead(birchB64, 1, "§3Full Bark Birch", "§7§lID§7 17:14"));
-		inv.setItem(12, i.createHead(jungleB64, 1, "§3Full Bark Jungle", "§7§lID§7 17:15"));
-		inv.setItem(13, i.createHead(acaciaB64, 1, "§3Full Bark Acacia", "§7§lID§7 162:12"));
-		inv.setItem(14, i.createHead(darkOakB64, 1, "§3Full Bark Dark Oak", "§7§lID§7 162:13"));
+		inv.setItem(9, i.createHead(oakB64, 1, "3Full Bark Oak", "7lID7 17:12"));
+		inv.setItem(10, i.createHead(spruceB64, 1, "3Full Bark Spruce", "7lID7 17:13"));
+		inv.setItem(11, i.createHead(birchB64, 1, "3Full Bark Birch", "7lID7 17:14"));
+		inv.setItem(12, i.createHead(jungleB64, 1, "3Full Bark Jungle", "7lID7 17:15"));
+		inv.setItem(13, i.createHead(acaciaB64, 1, "3Full Bark Acacia", "7lID7 162:12"));
+		inv.setItem(14, i.createHead(darkOakB64, 1, "3Full Bark Dark Oak", "7lID7 162:13"));
 		
-		inv.setItem(18, i.create(Material.GRASS_PATH, (short) 0, 1, "§3Grass Path", ""));
-		inv.setItem(19, i.create(Material.ENDER_PORTAL_FRAME, (short) 0, 1, "§3End Portal Frame", ""));
-		inv.setItem(20, i.create(Material.MOB_SPAWNER, (short) 0, 1, "§3Spawner Cage", ""));
-		inv.setItem(21, i.create(Material.BARRIER, (short) 0, 1, "§3Barrier", ""));
+		inv.setItem(18, i.create(Material.GRASS_PATH, (short) 0, 1, "3Grass Path", ""));
+		inv.setItem(19, i.create(Material.ENDER_PORTAL_FRAME, (short) 0, 1, "3End Portal Frame", ""));
+		inv.setItem(20, i.create(Material.MOB_SPAWNER, (short) 0, 1, "3Spawner Cage", ""));
+		inv.setItem(21, i.create(Material.BARRIER, (short) 0, 1, "3Barrier", ""));
+		inv.setItem(22, i.createHead(EndGateway, 1, "3End Gateway", "7lID7 209"));
 		return inv;
 	}
 	
