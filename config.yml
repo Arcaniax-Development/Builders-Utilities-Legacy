@@ -1,6 +1,6 @@
 disable-weather-changes: true
 
-disable-physics: true
+disable-physics: false
 
 disable-gravity-physics: false
 
@@ -8,7 +8,7 @@ disable-explosions: true
 
 disable-soil-trample: true
 
-disable-leaves-decay: true
+disable-leaves-decay: false
 
 fix-attackspeed: true
 
