@@ -82,12 +82,6 @@ public class Main extends JavaPlugin implements Listener {
         getCommand("/scale").setExecutor(commandHandler);
         getCommand("/twist").setExecutor(commandHandler);
         getCommand("butil").setExecutor(commandHandler);
-
-        // Check if WorldSystem is installed so both plugins are now compatible
-        if (pm.getPlugin("WorldSystem") == null) {
-            System.out.println("asdfasdf");
-            getCommand("ws").setExecutor(commandHandler);
-        }
     }
 
     @EventHandler

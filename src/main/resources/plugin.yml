@@ -53,7 +53,5 @@ commands:
     blocks:
         description: opens secret blocks menu
         aliases: secretblocks
-    ws:
-        description: alias
     fs:
         description: alias
