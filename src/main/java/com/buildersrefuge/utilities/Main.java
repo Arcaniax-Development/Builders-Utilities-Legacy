@@ -58,6 +58,7 @@ public class Main extends JavaPlugin implements Listener {
         pm.registerEvents(new SecretBlocksInventoryListener(this), this);
         pm.registerEvents(new ToggleInventoryListener(this), this);
         pm.registerEvents(new PlayerMoveListener(this), this);
+        pm.registerEvents(new CommandListener(this), this);
         pm.registerEvents(this, this);
 
         getCommand("banner").setExecutor(new BannerHandler(this));
@@ -83,8 +84,10 @@ public class Main extends JavaPlugin implements Listener {
         getCommand("butil").setExecutor(commandHandler);
 
         // Check if WorldSystem is installed so both plugins are now compatible
-        if(pm.getPlugin("WorldSystem") != null)
+        if (pm.getPlugin("WorldSystem") == null) {
+            System.out.println("asdfasdf");
             getCommand("ws").setExecutor(commandHandler);
+        }
     }
 
     @EventHandler
