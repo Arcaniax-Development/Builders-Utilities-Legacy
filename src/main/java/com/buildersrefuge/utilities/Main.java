@@ -74,7 +74,6 @@ public class Main extends JavaPlugin implements Listener {
         getCommand("/f").setExecutor(commandHandler);
         getCommand("/pa").setExecutor(commandHandler);
         getCommand("/c").setExecutor(commandHandler);
-        getCommand("ws").setExecutor(commandHandler);
         getCommand("fs").setExecutor(commandHandler);
         getCommand("af").setExecutor(commandHandler);
         getCommand("advfly").setExecutor(commandHandler);
@@ -82,6 +81,10 @@ public class Main extends JavaPlugin implements Listener {
         getCommand("/scale").setExecutor(commandHandler);
         getCommand("/twist").setExecutor(commandHandler);
         getCommand("butil").setExecutor(commandHandler);
+
+        // Check if WorldSystem is installed so both plugins are now compatible
+        if(pm.getPlugin("WorldSystem") != null)
+            getCommand("ws").setExecutor(commandHandler);
     }
 
     @EventHandler
