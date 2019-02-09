@@ -192,7 +192,6 @@ public class CommandHandler implements Listener, CommandExecutor {
                     p.sendMessage(prefix + "§c //scale [size]");
                     return true;
                 }
-
             case "fa":
                 s = new StringBuilder();
                 if (args.length != 0) {
