@@ -192,16 +192,6 @@ public class CommandHandler implements Listener, CommandExecutor {
                     p.sendMessage(prefix + "§c //scale [size]");
                     return true;
                 }
-            case "/ws":
-                s = new StringBuilder();
-                if (args.length != 0) {
-                    for (String arg : args) {
-                        s.append(arg).append(" ");
-                    }
-                }
-
-                plugin.getServer().dispatchCommand(p, "speed walk " + s);
-                return true;
             case "fa":
                 s = new StringBuilder();
                 if (args.length != 0) {

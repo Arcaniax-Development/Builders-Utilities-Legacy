@@ -58,6 +58,7 @@ public class Main extends JavaPlugin implements Listener {
         pm.registerEvents(new SecretBlocksInventoryListener(this), this);
         pm.registerEvents(new ToggleInventoryListener(this), this);
         pm.registerEvents(new PlayerMoveListener(this), this);
+        pm.registerEvents(new CommandListener(this), this);
         pm.registerEvents(this, this);
 
         getCommand("banner").setExecutor(new BannerHandler(this));
@@ -74,7 +75,6 @@ public class Main extends JavaPlugin implements Listener {
         getCommand("/f").setExecutor(commandHandler);
         getCommand("/pa").setExecutor(commandHandler);
         getCommand("/c").setExecutor(commandHandler);
-        getCommand("ws").setExecutor(commandHandler);
         getCommand("fs").setExecutor(commandHandler);
         getCommand("af").setExecutor(commandHandler);
         getCommand("advfly").setExecutor(commandHandler);

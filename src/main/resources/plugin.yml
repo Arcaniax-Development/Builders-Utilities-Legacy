@@ -1,6 +1,10 @@
 name: BuildersUtilities
 main: com.buildersrefuge.utilities.Main
 version: 1.2.4
+
+loadbefore:
+    - WorldSystem
+
 commands:
     banner:
         description: opens banner creator
@@ -49,7 +53,5 @@ commands:
     blocks:
         description: opens secret blocks menu
         aliases: secretblocks
-    ws:
-        description: alias
     fs:
         description: alias
