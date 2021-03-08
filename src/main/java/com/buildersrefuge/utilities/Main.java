@@ -6,6 +6,9 @@ import com.buildersrefuge.utilities.cmd.CommandHandler;
 import com.buildersrefuge.utilities.cmd.SecretBlockHandler;
 import com.buildersrefuge.utilities.listeners.*;
 import com.buildersrefuge.utilities.object.NoClipManager;
+import de.notmyfault.serverlib.ServerLib;
+import org.bstats.bukkit.Metrics;
+import org.bstats.charts.SimplePie;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
 import org.bukkit.Location;
@@ -38,6 +41,7 @@ public class Main extends JavaPlugin implements Listener {
     public static List<String> ironTrapdoorNames;
     public static List<String> slabNames;
     public static List<String> terracottaNames;
+    private static final int BSTATS_ID = 5168;
 
     public void onEnable() {
         String a = this.getServer().getClass().getPackage().getName();
@@ -82,6 +86,9 @@ public class Main extends JavaPlugin implements Listener {
         getCommand("/scale").setExecutor(commandHandler);
         getCommand("/twist").setExecutor(commandHandler);
         getCommand("butil").setExecutor(commandHandler);
+        ServerLib.checkUnsafeForks();
+        Metrics metrics = new Metrics(this, BSTATS_ID);
+        metrics.addCustomChart(new SimplePie("worldeditImplementation", () -> Bukkit.getPluginManager().getPlugin("FastAsyncWorldEdit") != null ? "FastAsyncWorldEdit" : "WorldEdit"));
     }
 
     @EventHandler
